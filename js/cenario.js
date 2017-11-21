@@ -1655,14 +1655,14 @@ function chamaCanvas(personagem){
 }
 
 function morreu(){
-	window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde;
+	//window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde;
 	if(pontosDuranteJogo > recorde && jaAtuzalizou == 0){
 		recorde = pontosDuranteJogo;
 		jaAtuzalizou = 1;
-		//window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde;
+		window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde;
 	}
 	//chamaHome(); // seria para remover os canvas e colocar os menus
-	//window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde; //gambiarra para na hora que voltar ao menu, recuperar a pontuacao
+	window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde; //gambiarra para na hora que voltar ao menu, recuperar a pontuacao
 	//alert("VOCÊ PERDEU !");
 	// window.location.href = 'index.html?' + recorde; //gambiarra para na hora que voltar ao menu, recuperar a pontuacao
 }
