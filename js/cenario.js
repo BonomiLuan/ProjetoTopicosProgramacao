@@ -1358,13 +1358,14 @@ function personagem(qual_personagem){
         zezim.posY = (canvas.height / 2);
         loop();
     }
-    
+    var jaAtuzalizou = 0;
     function update(){
         zezim.move();
         
         if(vida == 0){
-            if(pontosDuranteJogo > recorde){
-                recorde = pontosDuranteJogo;
+            if(pontosDuranteJogo > recorde && jaAtuzalizou == 0){
+				recorde = pontosDuranteJogo;
+				jaAtuzalizou = 1;
 			}
 			//chamaHome(); // seria para remover os canvas e colocar os menus
 			window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde; //gambiarra para na hora que voltar ao menu, recuperar a pontuacao
