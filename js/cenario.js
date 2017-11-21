@@ -1095,7 +1095,7 @@ renderer.render(scene);
 				if(fundo.position.z > -15){ //se esta muito proximo, a imagem é resetada para traz
 					fundo.position.z=-100;
 					var aix= Math.floor(Math.random()*4);
-					if(aix == 0) texture = THREE.ImageUtils.loadTexture('back0.jpg', {}, function() {
+					if(aix == 0) texture = THREE.ImageUtils.loadTexture('back.jpg', {}, function() {
 					renderer.render(scene);
 					});
 					if(aix == 1) texture = THREE.ImageUtils.loadTexture('back2.jpg', {}, function() {
