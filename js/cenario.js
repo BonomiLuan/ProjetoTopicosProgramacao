@@ -918,16 +918,14 @@ renderer.render(scene);
 	
 	var animate = function () {
 		requestAnimationFrame( animate );
-		if(jaAtuzalizou == 1){
-			return;
-		}
+		
 			if(perdendo == true) {
 				tempoCaindo++;
 				camera.position.y-=0.1;
 				camera.rotation.x+=0.001;
 				KeyEsquerda = false;
 				KeyDireita = false;
-				if(tempoCaindo > 150) vida = 0;
+				if(tempoCaindo > 150) morreu();
 				//vida = 0;
 			}
 			
@@ -1364,17 +1362,6 @@ function personagem(qual_personagem){
     }
     function update(){
         zezim.move();
-        
-        if(vida == 0){
-            if(pontosDuranteJogo > recorde && jaAtuzalizou == 0){
-				recorde = pontosDuranteJogo;
-				jaAtuzalizou = 1;
-			}
-			//chamaHome(); // seria para remover os canvas e colocar os menus
-			window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde; //gambiarra para na hora que voltar ao menu, recuperar a pontuacao
-            //alert("VOCÊ PERDEU !");
-           // window.location.href = 'index.html?' + recorde; //gambiarra para na hora que voltar ao menu, recuperar a pontuacao
-        }
     }
     
     // desenha na tela
@@ -1665,4 +1652,15 @@ function chamaCanvas(personagem){
     document.getElementById("personagem5").remove();
 	//home(personagem);	// testando
     createCenario(personagem); // passar o personagem por parametro
+}
+
+function morreu(){
+	if(pontosDuranteJogo > recorde && jaAtuzalizou == 0){
+		recorde = pontosDuranteJogo;
+		jaAtuzalizou = 1;
+	}
+	//chamaHome(); // seria para remover os canvas e colocar os menus
+	window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde; //gambiarra para na hora que voltar ao menu, recuperar a pontuacao
+	//alert("VOCÊ PERDEU !");
+	// window.location.href = 'index.html?' + recorde; //gambiarra para na hora que voltar ao menu, recuperar a pontuacao
 }
