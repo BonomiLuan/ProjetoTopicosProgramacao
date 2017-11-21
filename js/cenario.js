@@ -5,6 +5,8 @@ var tempo;
 var qual_personagem = 1;
 var morte = 0;
 
+var jaAtuzalizou = 0;
+
 //comentar codigo
 //fazer queda
 //pulo sequencial?
@@ -1360,7 +1362,6 @@ function personagem(qual_personagem){
         zezim.posY = (canvas.height / 2);
         loop();
     }
-    var jaAtuzalizou = 0;
     function update(){
         zezim.move();
         
