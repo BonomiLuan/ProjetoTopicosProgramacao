@@ -1,0 +1,686 @@
+<html>
+	<head>
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+		<script src="js/three.js"></script>
+		<script>
+			var linha1 = [];
+			var linha2 = [];
+			var linha3 = [];
+			var linha4 = [];
+			var linha5 = [];
+			var linha6 = [];
+			var linha7 = [];
+			var linha8 = [];
+			var linha9 = [];
+			var linha10 = [];
+			var linha11 = [];
+			var linha12 = [];
+			var linha13 = [];
+			var linha14 = [];
+			var linha15 = [];
+			var linha16 = [];
+			var linha17 = [];
+			var linha18 = [];
+			var linha19 = [];
+			
+			var i = 0;
+			
+			var posicaoX = 0;
+			var posicaoY = 0;
+			var posicaoZ = 0;
+			
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+			texture = THREE.ImageUtils.loadTexture('js/crate.gif', {}, function() {
+    renderer.render(scene);
+});
+			var geometry = new THREE.BoxGeometry( 1, 0.1, 2 ); //(x,y,z) de formato
+			var material = new THREE.MeshBasicMaterial( { map: texture } );
+			
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha1[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha1[i].position.y = posicaoY;
+				linha1[i].position.x = posicaoX;
+				linha1[i].position.z = posicaoZ;
+				scene.add( linha1[i]);
+			}
+			
+			posicaoZ=-3;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha2[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha2[i].position.y = posicaoY;
+				linha2[i].position.x = posicaoX;
+				linha2[i].position.z = posicaoZ;
+				scene.add( linha2[i]);
+			}
+			
+			posicaoZ=-6;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha3[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha3[i].position.y = posicaoY;
+				linha3[i].position.x = posicaoX;
+				linha3[i].position.z = posicaoZ;
+				scene.add( linha3[i]);
+			}
+			
+			posicaoZ=-9;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha4[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha4[i].position.y = posicaoY;
+				linha4[i].position.x = posicaoX;
+				linha4[i].position.z = posicaoZ;
+				scene.add( linha4[i]);
+			}
+			
+			posicaoZ=-12;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha5[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha5[i].position.y = posicaoY;
+				linha5[i].position.x = posicaoX;
+				linha5[i].position.z = posicaoZ;
+				scene.add( linha5[i]);
+			}
+			
+			posicaoZ=-15;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha6[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha6[i].position.y = posicaoY;
+				linha6[i].position.x = posicaoX;
+				linha6[i].position.z = posicaoZ;
+				scene.add( linha6[i]);
+			}
+			
+			posicaoZ=-18;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha7[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha7[i].position.y = posicaoY;
+				linha7[i].position.x = posicaoX;
+				linha7[i].position.z = posicaoZ;
+				scene.add( linha7[i]);
+			}
+			
+			posicaoZ=-21;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha8[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha8[i].position.y = posicaoY;
+				linha8[i].position.x = posicaoX;
+				linha8[i].position.z = posicaoZ;
+				scene.add( linha8[i]);
+			}
+			
+			posicaoZ=-24;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha9[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha9[i].position.y = posicaoY;
+				linha9[i].position.x = posicaoX;
+				linha9[i].position.z = posicaoZ;
+				scene.add( linha9[i]);
+			}
+			
+			posicaoZ=-27;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha10[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha10[i].position.y = posicaoY;
+				linha10[i].position.x = posicaoX;
+				linha10[i].position.z = posicaoZ;
+				scene.add( linha10[i]);
+			}
+			
+			posicaoZ=-30;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha11[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha11[i].position.y = posicaoY;
+				linha11[i].position.x = posicaoX;
+				linha11[i].position.z = posicaoZ;
+				scene.add( linha11[i]);
+			}
+			
+			posicaoZ=-33;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha12[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha12[i].position.y = posicaoY;
+				linha12[i].position.x = posicaoX;
+				linha12[i].position.z = posicaoZ;
+				scene.add( linha12[i]);
+			}
+			
+			posicaoZ=-36;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha13[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha13[i].position.y = posicaoY;
+				linha13[i].position.x = posicaoX;
+				linha13[i].position.z = posicaoZ;
+				scene.add( linha13[i]);
+			}
+			
+			posicaoZ=-39;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha14[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha14[i].position.y = posicaoY;
+				linha14[i].position.x = posicaoX;
+				linha14[i].position.z = posicaoZ;
+				scene.add( linha14[i]);
+			}
+			
+			posicaoZ=-42;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha15[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha15[i].position.y = posicaoY;
+				linha15[i].position.x = posicaoX;
+				linha15[i].position.z = posicaoZ;
+				scene.add( linha15[i]);
+			}
+			
+			posicaoZ=-45;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha16[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha16[i].position.y = posicaoY;
+				linha16[i].position.x = posicaoX;
+				linha16[i].position.z = posicaoZ;
+				scene.add( linha16[i]);
+			}
+			
+			posicaoZ=-48;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha17[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha17[i].position.y = posicaoY;
+				linha17[i].position.x = posicaoX;
+				linha17[i].position.z = posicaoZ;
+				scene.add( linha17[i]);
+			}
+			
+			posicaoZ=-51;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha18[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha18[i].position.y = posicaoY;
+				linha18[i].position.x = posicaoX;
+				linha18[i].position.z = posicaoZ;
+				scene.add( linha18[i]);
+			}
+			
+			posicaoZ=-54;
+			posicaoY = 9;
+			posicaoX = -1;
+			for(i = 0; i < 16;i++){
+				linha19[i] = new THREE.Mesh( geometry, material );
+				if(i <=8) posicaoY--; //aqui comeca a logica insana pro 16 lados, ta explicada no papel e segue a logica do
+				else posicaoY++; //e segue a logica do implementado sem loop
+				if(i <= 4) posicaoX++;
+				if(i > 4 && i <=12) posicaoX--;
+				if(i > 12) posicaoX++;
+				linha19[i].position.y = posicaoY;
+				linha19[i].position.x = posicaoX;
+				linha19[i].position.z = posicaoZ;
+			//	scene.add( linha19[i]);
+			}
+			////////////////////////////primeira linha////////////////////////////////
+		/*	linha1[0] = new THREE.Mesh( geometry, material );
+			linha1[0].position.y = 8;
+			linha1[0].position.x = 0;
+			linha1[0].position.z = posicaoZ;
+			scene.add( linha1[0] );
+			
+			linha1[1] = new THREE.Mesh( geometry, material );
+			linha1[1].position.y = 7;
+			linha1[1].position.x = 1;
+			linha1[1].position.z = posicaoZ;
+			scene.add( linha1[1] );
+			
+			linha1[2] = new THREE.Mesh( geometry, material );
+			linha1[2].position.y = 6;
+			linha1[2].position.x = 2;
+			linha1[2].position.z = posicaoZ;
+			scene.add( linha1[2] );
+			
+			linha1[3] = new THREE.Mesh( geometry, material );
+			linha1[3].position.y = 5;
+			linha1[3].position.x = 3;
+			linha1[3].position.z = posicaoZ;
+			scene.add( linha1[3] );
+			
+			linha1[4] = new THREE.Mesh( geometry, material );
+			linha1[4].position.y = 4;
+			linha1[4].position.x = 4;
+			linha1[4].position.z = posicaoZ;
+			scene.add( linha1[4] );
+			
+			linha1[5] = new THREE.Mesh( geometry, material );
+			linha1[5].position.y = 3;
+			linha1[5].position.x = 3;
+			linha1[5].position.z = posicaoZ;
+			scene.add( linha1[5] );
+			
+			linha1[6] = new THREE.Mesh( geometry, material );
+			linha1[6].position.y = 2;
+			linha1[6].position.x = 2;
+			linha1[6].position.z = posicaoZ;
+			scene.add( linha1[6] );
+			
+			linha1[7] = new THREE.Mesh( geometry, material );
+			linha1[7].position.y = 1;
+			linha1[7].position.x = 1;
+			linha1[7].position.z = posicaoZ;
+			scene.add( linha1[7] );
+			
+			linha1[8] = new THREE.Mesh( geometry, material );
+			linha1[8].position.y = 0;
+			linha1[8].position.x = 0;
+			linha1[8].position.z = posicaoZ;
+			scene.add( linha1[8] );
+			
+			
+			//////////////////////////////////////meio///////////////////////////////////////////////////////////////////
+			
+			
+			linha1[9] = new THREE.Mesh( geometry, material ); //igual 7 refletido em x
+			linha1[9].position.y = 1;
+			linha1[9].position.x = -1;
+			linha1[9].position.z = posicaoZ;
+			scene.add( linha1[9] );
+			
+			linha1[10] = new THREE.Mesh( geometry, material );
+			linha1[10].position.y = 2;
+			linha1[10].position.x = -2;
+			linha1[10].position.z = posicaoZ;
+			scene.add( linha1[10] );
+			
+			linha1[11] = new THREE.Mesh( geometry, material );
+			linha1[11].position.y = 3;
+			linha1[11].position.x = -3;
+			linha1[11].position.z = posicaoZ;
+			scene.add( linha1[11] );
+			
+			linha1[12] = new THREE.Mesh( geometry, material );
+			linha1[12].position.y = 4;
+			linha1[12].position.x = -4;
+			linha1[12].position.z = posicaoZ;
+			scene.add( linha1[12] );
+			
+			linha1[13] = new THREE.Mesh( geometry, material );
+			linha1[13].position.y = 5;
+			linha1[13].position.x = -3;
+			linha1[13].position.z = posicaoZ;
+			scene.add( linha1[13] );
+			
+			linha1[14] = new THREE.Mesh( geometry, material );
+			linha1[14].position.y = 6;
+			linha1[14].position.x = -2;
+			linha1[14].position.z = posicaoZ;
+			scene.add( linha1[14] );
+			
+			linha1[15] = new THREE.Mesh( geometry, material );
+			linha1[15].position.y = 7;
+			linha1[15].position.x = -1;
+			linha1[15].position.z = posicaoZ;
+			scene.add( linha1[15] );
+			*/
+			
+
+			
+			
+			
+		/*	var geometry = new THREE.BoxGeometry( 1, 0.1, 2 );
+			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			var cube1 = new THREE.Mesh( geometry, material );
+			cube1.position.y = 4;
+			scene.add( cube1 ); */
+			//camera.position.x =0;
+			camera.position.z = 20;
+			camera.position.y = 2;
+			
+			
+			var brincaCamera = 0.0075;
+			var animate = function () {
+				requestAnimationFrame( animate );
+				camera.rotation.y += brincaCamera;
+				if(camera.rotation.y >0.5)
+				{
+					brincaCamera = -0.0075;
+				}
+				if(camera.rotation.y <-0.5)
+				{
+					brincaCamera = 0.0075;
+				}
+				//scene.remove( linha7[15] );
+				for(i = 0; i < 16;i++){
+					linha1[i].position.z += 0.1;
+				}
+				for(i = 0 ;i < 16;i++)
+					linha2[i].position.z += 0.1;
+				
+				for(i = 0 ;i < 16;i++)
+					linha3[i].position.z += 0.1;
+				
+				for(i = 0 ;i < 16;i++)
+					linha4[i].position.z += 0.1;
+				
+				for(i = 0 ;i < 16;i++)
+					linha5[i].position.z += 0.1;
+				
+				for(i = 0 ;i < 16;i++)
+					linha6[i].position.z += 0.1;
+					
+				for(i = 0 ;i < 16;i++)
+					linha7[i].position.z += 0.1;
+					
+				for(i = 0 ;i < 16;i++)
+					linha8[i].position.z += 0.1;
+					
+				for(i = 0 ;i < 16;i++)
+					linha9[i].position.z += 0.1;
+				
+				for(i = 0 ;i < 16;i++)
+					linha10[i].position.z += 0.1;
+					
+				for(i = 0 ;i < 16;i++)
+					linha11[i].position.z += 0.1;
+					
+				for(i = 0 ;i < 16;i++)
+					linha12[i].position.z += 0.1;
+					
+				for(i = 0 ;i < 16;i++)
+					linha13[i].position.z += 0.1;
+					
+				for(i = 0 ;i < 16;i++)
+					linha14[i].position.z += 0.1;
+				
+				for(i = 0 ;i < 16;i++)
+					linha15[i].position.z += 0.1;
+					
+				for(i = 0 ;i < 16;i++)
+					linha16[i].position.z += 0.1;
+					
+				for(i = 0 ;i < 16;i++)
+					linha17[i].position.z += 0.1;
+					
+				for(i = 0 ;i < 16;i++)
+					linha18[i].position.z += 0.1;
+					
+				for(i = 0 ;i < 16;i++)
+					linha19[i].position.z += 0.1;
+			
+			/*	linha2[0].position.z += 0.1;
+				linha2[1].position.z += 0.1;
+				linha2[2].position.z += 0.1;
+				linha2[3].position.z += 0.1;
+				linha2[4].position.z += 0.1;
+				linha2[5].position.z += 0.1;
+				linha2[6].position.z += 0.1;
+				linha2[7].position.z += 0.1;
+				linha2[8].position.z += 0.1;
+				linha2[9].position.z += 0.1;
+				linha2[10].position.z += 0.1;
+				linha2[11].position.z += 0.1;
+				linha2[12].position.z += 0.1;
+				linha2[13].position.z += 0.1;
+				linha2[14].position.z += 0.1;
+				linha2[15].position.z += 0.1; 
+				
+			
+				linha7[15].position.z += 0.1;*/
+				
+				//cube2.position.z += 0.1;
+				if(linha1[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha1[i].position.z =  -30;
+				}
+				
+				if(linha2[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha2[i].position.z =  -30;
+				}
+				
+				if(linha3[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha3[i].position.z =  -30;
+				}
+				
+				if(linha4[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha4[i].position.z =  -30;
+				}
+				
+				if(linha5[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha5[i].position.z =  -30;
+				}
+				
+				if(linha6[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha6[i].position.z =  -30;
+				}
+				
+				if(linha7[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha7[i].position.z =  -30;
+				}
+				
+				if(linha8[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha8[i].position.z =  -30;
+				}
+				
+				if(linha9[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha9[i].position.z =  -30;
+				}
+				
+				if(linha10[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha10[i].position.z =  -30;
+				}
+				
+				if(linha11[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha11[i].position.z =  -30;
+				}
+				
+				if(linha12[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha12[i].position.z =  -30;
+				}
+				
+				if(linha13[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha13[i].position.z =  -30;
+				}
+				
+				if(linha14[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha14[i].position.z =  -30;
+				}
+				
+				if(linha15[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha15[i].position.z =  -30;
+				}
+				
+				if(linha16[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha16[i].position.z =  -30;
+				}
+				
+				if(linha17[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha17[i].position.z =  -30;
+				}
+				
+				if(linha18[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha18[i].position.z =  -30;
+				}
+				
+				if(linha19[0].position.z > 25){
+					for(i = 0; i < 16;i++)
+						linha19[i].position.z =  -30;
+				}
+				
+			/*		
+			if(linha7[0].position.z > 20){
+					linha7[0].position.z = 0;
+					linha7[1].position.z = 0;
+					linha7[2].position.z = 0;
+					linha7[3].position.z = 0;
+					linha7[4].position.z = 0;
+					linha7[5].position.z = 0;
+					linha7[6].position.z = 0;
+					linha7[7].position.z = 0;
+					linha7[8].position.z = 0;
+					linha7[9].position.z = 0;
+					linha7[10].position.z = 0;
+					linha7[11].position.z = 0;
+					linha7[12].position.z = 0;
+					linha7[13].position.z = 0;
+					linha7[14].position.z = 0;
+					linha7[15].position.z = 0;
+					}*/
+			//	if(cube2.position.z > 20){
+				//	cube2.position.z = -2;
+					//}
+				
+				//cube.rotation.x += 0.1;
+				//cube.rotation.y += 0.1;
+
+				renderer.render(scene, camera);
+			};
+
+			animate();
+		</script>
+	</body>
+</html>
