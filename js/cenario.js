@@ -925,7 +925,14 @@ renderer.render(scene);
 				camera.rotation.x+=0.001;
 				KeyEsquerda = false;
 				KeyDireita = false;
-				if(tempoCaindo > 150) morreu();
+				if(tempoCaindo > 150){
+					if(pontosDuranteJogo > recorde && jaAtuzalizou == 0){
+						recorde = pontosDuranteJogo;
+						jaAtuzalizou = 1;
+						//window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde;
+					}
+					morreu();
+				} 
 				//vida = 0;
 			}
 			
@@ -1655,13 +1662,10 @@ function chamaCanvas(personagem){
 }
 
 function morreu(){
-	if(pontosDuranteJogo > recorde && jaAtuzalizou == 0){
-		recorde = pontosDuranteJogo;
-		jaAtuzalizou = 1;
-		window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde;
-	}
+	window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde;
+	
 	//chamaHome(); // seria para remover os canvas e colocar os menus
-	window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde; //gambiarra para na hora que voltar ao menu, recuperar a pontuacao
+	//window.location.href = "https://bonomiluan.github.io/ProjetoTopicosProgramacao/?" + recorde; //gambiarra para na hora que voltar ao menu, recuperar a pontuacao
 	//alert("VOCÊ PERDEU !");
 	// window.location.href = 'index.html?' + recorde; //gambiarra para na hora que voltar ao menu, recuperar a pontuacao
 }
