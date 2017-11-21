@@ -923,8 +923,8 @@ renderer.render(scene);
 				camera.rotation.x+=0.001;
 				KeyEsquerda = false;
 				KeyDireita = false;
-				//if(tempoCaindo > 150) vida = 0;
-				vida = 0;
+				if(tempoCaindo > 150) vida = 0;
+				//vida = 0;
 			}
 			
 		//abaixo seguem funcoes para realizar tarefas dependendo de
