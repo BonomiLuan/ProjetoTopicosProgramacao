@@ -916,7 +916,9 @@ renderer.render(scene);
 	
 	var animate = function () {
 		requestAnimationFrame( animate );
-		
+		if(jaAtuzalizou == 1){
+			return;
+		}
 			if(perdendo == true) {
 				tempoCaindo++;
 				camera.position.y-=0.1;
